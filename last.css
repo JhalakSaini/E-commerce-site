@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: calibri;
+    background-image: url(./images/bg2.jpg);
+}
+
+
+
+/*HEADER*/ 
+
+.horizontal-list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+.horizontal-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+    font-weight: bold;
+
+}
+
+.nav-menu li a:hover {
+    color: rgb(173, 171, 171);
+    border-bottom: 1px solid rgb(173, 171, 171);
+    font-size: 23px;
+    transition: .3s;
+    
+}
+
+.logo{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.name{
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    font-family: algerian;
+    
+}
+.nav-content{
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 700px;
+    
+    
+}
+.header{
+    margin: 29px;
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+    
+}
+.heading{
+    color: rgb(218, 0, 0);
+    margin: 40px 40px 40px 520px;
+    font-size: 50px;
+    font-family: algerian;
+}
+
+form{
+    margin: 20px 30px 20px 450px;
+    font-size: 28px;
+    color: white;
+    
+}
+label{
+    margin: 10px 0px 30px 0px;   
+}
+::placeholder{
+    color: rgb(218, 0, 0);
+}
+input{
+    margin: 0px 0px 15px 0px;
+    padding: 9px;
+    font-family: calibri;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 1px 1px 4px rgb(205, 206, 206) ;
+}
+
+
+button{
+    margin: 3px 3px 3px 515px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    background-color:rgb(218, 0, 0);
+    border: 2px solid black;
+    border-radius: 9px;
+}
+button:hover{
+    background-color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#fname,#lname{
+    width: 290px;
+    height: 15px;
+}
+#email{
+    width: 610px;
+    height: 15px;
+    background-color: black;
+}
+#contact,#cname,#ccnum,#expmonth,#cvv,#expyr{
+    width: 610px;
+    height: 15px;
+}
+#street{
+    width: 610px;
+    height: 15px;
+}
+#city,#state{
+    width: 290px;
+    height: 15px;
+}
+#postal{
+    width: 290px;
+    height: 15px;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(17, 17, 17);
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(211, 0, 0); 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lightgray; 
+}
+/*-----Box -----*/
+
+.iconuser{
+    height: 80px;
+    width: 10px;
+    left: 45px;
+    border-radius: 4px;
+    position: relative;
+    background-color:red;
+    display: none;
+    
+}
+#okbtn{
+    background-color: red;
+    padding-bottom: 18px;
+    height: 25px;
+    width: 70px;
+    opacity: 1;
+    border-radius: 10px;
+}
+#okbtn:hover{
+  background-color: white;
+  cursor: pointer;
+  opacity: .8;
+}
+#icon{
+ /* height: 98px;  */
+ height: 100px;position:absolute;width: 100px;margin-left: 40%;border-radius: 50%;border:3px solid black;top:-10px
+
+}
+#dialogoverlay{
+    padding: 10px;
+    display: none; 
+    opacity: .4;
+    position: fixed;
+    top:0px;
+    background: black;
+    width: 100%; 
+    z-index:1;
+} 
+#dialogbox{
+    display: none; 
+    position: fixed; 
+    background: black;
+    border-radius: 10px;
+    border:4px solid red;
+    width:600px;
+    height: 220px;
+    z-index:10;
+}
+
+
+.tick-mark{
+height: 3px;
+position: relative;
+background-color: chartreuse;
+width: 80px;
+top:50px;
+left: 25px;
+transform: rotate(130deg);
+
+}
+#dialogbox{
+    border: 1px solid white;
+}
+#dialogbox>div{
+    padding: 5px;
+    background:black;
+    margin:8px;
+    
+}
+#dialogbox>div>#dialogboxhead{
+    background: black;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px;
+    color:white;
+}
+#dialogbox>div>#dialogboxbody{
+    background: black;
+    color:white;
+    font-size: 20px;
+}
+#dialogbox>div>#dialogboxfoot{
+    background: black;
+    text-align: right;
+}

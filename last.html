@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="last.css">
+    <!--favicon-->
+    <link rel="icon" href="./images/logo4.png" type="image/gif" sizes="20x20">
+    
+    <script>
+         
+        function CustomAlert(){
+            this.test=function(dialog){
+                // fetching elements
+                // var a00=document.getElementById("username").value;
+                var a1=document.getElementById("fname").value;
+                var a2=document.getElementById("lname").value;
+                var a3=document.getElementById("email").value;
+                var a4=document.getElementById("contact").value;
+                var a5=document.getElementById("street").value;
+                var a6=document.getElementById("city").value;
+                var a7=document.getElementById("state").value;
+                var a8=document.getElementById("postal").value;
+                var a9=document.getElementById("cname").value;
+                var a10=document.getElementById("ccnum").value;
+                var a11=document.getElementById("expmonth").value;
+                var a12=document.getElementById("cvv").value;
+                var a13=document.getElementById("expyr").value;
+                
+            //                 //ends
+            var winW=window.innerWidth;
+            var winH=window.innerHeight;
+            var dialogoverlay=document.getElementById('dialogoverlay');
+            var dialogbox=document.getElementById('dialogbox');
+            dialogoverlay.style.display="block";
+             dialogoverlay.style.height=winH+(550)+"px";
+            dialogbox.style.left=(winW/2)-(550*.5)+"px";
+            dialogbox.style.top="100px";
+            dialogbox.style.display="block";
+            if(a1=='' || a2=='' || a3=='' || a4=='' || a5=='' || a6=='' || a7=='' || a8=='' || a9=='' || a10=='' ||a11=='' || a12=='')
+            {document.getElementById('dialogboxhead').innerHTML="<h2>Oops! Some field is missing please check again</h2>";
+            
+            var element=document.getElementsByClassName("iconuser");
+            element[0].style.display="block";
+            element[1].style.display="block";
+          
+            var tickelement=document.getElementsByClassName("tick-mark");
+           tickelement[0].style.display="none";
+           tickelement[1].style.display="none";
+
+           document.getElementById("icon").style.borderColor="red";
+        }
+            else{
+                document.getElementById('dialogboxhead').innerHTML="<h2>Your order has been successfully placed.</h2>";
+              
+            var tickelement=document.getElementsByClassName("tick-mark");
+           tickelement[0].style.display="block";
+           tickelement[1].style.display="block";
+            
+            var element=document.getElementsByClassName("iconuser");
+            element[0].style.display="none";
+            element[1].style.display="none";
+
+            document.getElementById("icon").style.borderColor="chartreuse";
+            }
+            document.getElementById('dialogboxbody').innerHTML='';
+            document.getElementById('dialogboxfoot').innerHTML='<button id="okbtn" onclick="Alert.ok()">OK</button>';
+    
+        }
+    
+    this.ok=function(){
+    document.getElementById('dialogbox').style.display="none";
+    document.getElementById('dialogoverlay').style.display="none";
+       
+    }
+   
+}
+
+
+    
+    var Alert = new CustomAlert()     
+    
+   
+
+    
+    </script>
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        
+        <div class="logo">
+            <img alt="pizzeria" src="./images/logo4.png">
+        </div>
+        <div class="name">
+            <p><span style="color: white;">PIZZERIA</span><span style="color: rgb(43, 64, 255);">VETRI</span></p>
+        </div>
+        <div class="nav-content">
+            <ul class="horizontal-list text-right nav-menu">
+                <li>
+                    <a href="./home.html"> Home </a>
+                </li>         
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="form">
+        <div class="heading">Customer Details</div>
+        <form>
+            <label for="name">Full Name</label><br>
+            <input type="text" id="fname" placeholder="First name" required> <input type="text" id="lname" placeholder="Last name" >
+            <br>
+            <label for="email">E-mail</label><br>
+            <input type="text" id="email" placeholder="abc@example.com" required>
+            <br>
+            <label for="contact">Contact Number</label><br>
+            <input type="text" id="contact" placeholder="(000)000-0000" required>
+            <br>
+            <label for="address">Address</label><br>
+            <input type="text" id="street"  placeholder="street address" required><br>
+            <input type="text" id="city"  placeholder="City" required> <input type="text" id="state" placeholder="State/Province" required><br>
+            <input type="text" id="postal"  placeholder="Pin Code" required><br>
+        
+        <div class="heading" style="margin-left: 100px;">Payment Method</div>
+        
+            <label for="cname">Name on Card</label><br>
+            <input type="text" id="cname" name="cardname" placeholder="abc" required><br>
+            <label for="ccnum">Credit card number</label><br>
+            <input type="text" id="ccnum" name="cardnumber"  placeholder="1111-2222-3333-4444" required><br>
+            <label for="expmonth">Exp Month</label><br>
+            <input type="text" id="expmonth" name="expmonth" placeholder="expiry month" required ><br>
+            <label for="cvv">CVV</label><br>
+            <input type="text" id="cvv" name="cardname" placeholder="XXX" required><br>
+            <label for="expyr">Exp year</label><br>
+            <input type="text" id="expyr" name="cardname" placeholder="expiry year" required ><br>
+            <button type="button" onClick="Alert.test('click ok to continue')" >Confirm Order</button>
+
+
+
+            
+            <div id="dialogoverlay">   
+            </div>
+            <div id="dialogbox" >
+                <!-- MYICON-->
+                    <div  style="height: 90px;top: 8px; position: relative; "> 
+                <div id="icon"> 
+                <div class="iconuser">
+                  <div class="iconuser" style="height: 10px;left:0;top:84px;border-radius: 20px;">
+        
+                  </div>
+        
+                </div style="font: 13px;">
+                <div class="tick-mark">
+                    <div class="tick-mark" style="left: 50px;top: 23px;transform: rotate(103deg);width: 50px;" ></div>
+                </div>
+              
+                </div>     
+                </div>
+                <!-- MYICON END -->
+                <div>
+                <div id="dialogboxhead"></div>
+                <div id="dialogboxbody"></div>
+                <div id="dialogboxfoot"></div>
+            </div>
+            </div>
+         
+        <!-- <button type="submit" onClick="Alert.test('click ok to continue')" >hihlo </button> -->
+        </form><br><br>
+    </div>
+    
+</body>
+</html>

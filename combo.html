@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meals and Combos</title>
+    <link rel="stylesheet" type="text/css" href="nonveg.css">
+    <!--favicon-->
+    <link rel="icon" href="./images/logo4.png" type="image/gif" sizes="20x20">
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        
+        <div class="logo">
+            <img alt="pizzeria" src="./images/logo4.png">
+        </div>
+        <div class="name">
+            <p><span style="color: white;">PIZZERIA</span><span style="color: rgb(43, 64, 255);">VETRI</span></p>
+        </div>
+        <div class="nav-content">
+            <ul class="horizontal-list text-right nav-menu">
+                <li>
+                    <a href="./home.html"> Home </a>
+                </li>
+                <li>
+                    <a href="./last.html"> Confirm Order</a>
+                </li>         
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="heading">MEALS AND COMBOS</div>
+    
+    <div class="main">
+
+        <!--cardstrt-->
+        <div class="cards">
+            <!--img block-->
+            <div class="image">
+                <img src="./images/unthinkable.jpg">
+            </div>
+            <!--title area-->
+            <div class="title">
+                <p>Unthinkable Special Combo</p>
+            </div>
+            <!--description-->
+            <div class="des">
+                <p>Red Unthinkable Pizza + Garlic Bread + Pepsi  Black Can</p>
+                <hr>
+                <br>
+                <div class="pointer">
+                    Just at ₹359
+
+                </div>
+                <hr>
+                <h3 class="counter-display" style="margin-top: 20px;">items selected</h3>
+                
+                
+                <button> Add to Cart</button>
+                
+                <button class="counter-minus" style="width: 30px;">-</button>
+                <button class="counter-plus" style="width: 30px;">+</button>
+            </div>
+        </div> 
+        <!--Card ENDS-->
+
+        <!--cardstrt-->
+       <div class="cards">
+        <!--img block-->
+        <div class="image">
+            <img src="./images/nonveg_combo.jpg">
+        </div>
+        <!--title area-->
+        <div class="title">
+            <p>Non Veg Combo</p>
+        </div>
+        <!--description-->
+        <div class="des">
+            <p>Med Pepper BBQ Chicken Pizza + Garlic bread + Pepsi</p>
+            <hr>
+            <br>
+            <div class="pointer">
+                Just at ₹489
+
+            </div>
+            <hr>
+            <h3 class="counter-display" style="margin-top: 20px;">items selected</h3>
+                
+                
+                <button> Add to Cart</button>
+                
+                <button class="counter-minus" style="width: 30px;">-</button>
+                <button class="counter-plus" style="width: 30px;">+</button>
+        </div>
+        </div> 
+        <!--Card ENDS-->
+
+        <!--cardstrt-->
+        <div class="cards">
+            <!--img block-->
+            <div class="image">
+                <img src="./images/reg_veg.jpg">
+            </div>
+            <!--title area-->
+            <div class="title">
+                <p>'2 Reg' Deluxe Veg Combo</p>
+            </div>
+            <!--description-->
+            <div class="des">
+                <p>2 Reg Pizzas (Deluxe Veggie + Veggie Extravaganza)</p>
+                <hr>
+                <br>
+                <div class="pointer">
+                    Just at ₹429
+
+                </div>
+                <hr>
+                <h3 class="counter-display" style="margin-top: 20px;">items selected</h3>
+                
+                
+                <button> Add to Cart</button>
+                
+                <button class="counter-minus" style="width: 30px;">-</button>
+                <button class="counter-plus" style="width: 30px;">+</button>
+            </div>
+        </div> 
+        <!--Card ENDS-->
+
+        <!--cardstrt-->
+        <div class="cards">
+            <!--img block-->
+            <div class="image">
+                <img src="./images/reg_nonveg.jpg">
+            </div>
+            <!--title area-->
+            <div class="title">
+                <p>'2 Reg' Deluxe  Non Veg Combo</p>
+            </div>
+            <!--description-->
+            <div class="des">
+                <p>2 Reg Pizzas (Chicken Golden Delight + Chicken Fiesta)</p>
+                <hr>
+                <br>
+                <div class="pointer">
+                    Just at ₹429
+
+                </div>
+                <hr>
+                <h3 class="counter-display" style="margin-top: 20px;">items selected</h3>
+                
+                
+                <button> Add to Cart</button>
+                
+                <button class="counter-minus" style="width: 30px;">-</button>
+                <button class="counter-plus" style="width: 30px;">+</button>
+            </div>
+        </div> 
+        <!--Card ENDS-->       
+    
+    <div class="dropup">
+        <div class="bttn"><button class="dropbtn" style="margin-left: 52em;">MENU</button></div>
+        <div class="dropup-content" style="margin-left: 52em;">
+          <a href="./nonveg.html">Non Veg</a>
+          <a href="./veggie.html">Veggie</a>
+          <a href="./dessert.html">Dessert</a>
+          <a href="./beverages.html">Beverages</a>
+          <a href="#">Combo Meals</a>
+        </div>
+      </div> 
+    </div> <!--Main ENDS-->
+<!--script-->
+
+     
+<script>
+
+    let counterDisplayElem = document.querySelectorAll('.counter-display')[0];
+ let counterMinusElem = document.querySelectorAll('.counter-minus')[0];
+ let counterPlusElem = document.querySelectorAll('.counter-plus')[0];
+ let count = 0;
+ updateDisplay();
+ counterPlusElem.addEventListener("click",()=>{
+     count++;
+     if(count>=0){
+     updateDisplay();}
+ }) ;
+ counterMinusElem.addEventListener("click",()=>{
+     count--;
+     if(count>=0){
+     updateDisplay();}
+ });
+ function updateDisplay(){
+     counterDisplayElem.innerHTML = "Items Selected : " + count;
+ };
+ // 2nd started
+ 
+ let c1 = document.querySelectorAll('.counter-display')[1];
+ let c2 = document.querySelectorAll('.counter-minus')[1];
+ let c3 = document.querySelectorAll('.counter-plus')[1];
+ let cnt = 0;
+ update();
+ c3.addEventListener("click",()=>{
+     cnt++;
+     if(cnt>=0){
+     update();}
+ }) ;
+ c2.addEventListener("click",()=>{
+     cnt--;
+     if(cnt>=0){
+     update();}
+ });
+ function update(){
+     c1.innerHTML = "Items Selected : " + cnt;
+ };
+ 
+ 
+ // 3rd started
+ let c4 = document.querySelectorAll('.counter-display')[2];
+ let c5 = document.querySelectorAll('.counter-minus')[2];
+ let c6 = document.querySelectorAll('.counter-plus')[2];
+ let count2 = 0;
+ update2();
+ c6.addEventListener("click",()=>{
+     count2++;
+     if(count2>=0){
+     update2();}
+ }) ;
+ c5.addEventListener("click",()=>{
+     count2--;
+     if(count2>=0){
+     update2();}
+ });
+ function update2(){
+     c4.innerHTML = "Items Selected : " + count2;
+ };
+ 
+ 
+ // 4thstarted
+ let c7 = document.querySelectorAll('.counter-display')[3];
+ let c8 = document.querySelectorAll('.counter-minus')[3];
+ let c9 = document.querySelectorAll('.counter-plus')[3];
+ let count3 = 0;
+ update3();
+ c9.addEventListener("click",()=>{
+     count3++;
+     if(count3>=0){
+     update3();}
+ }) ;
+ c8.addEventListener("click",()=>{
+     count3--;
+     if(count3>=0){
+     update3();}
+ });
+ function update3(){
+     c7.innerHTML = "Items Selected : " +  count3;
+ };
+ 
+ 
+ // 5th started
+ let c10 = document.querySelectorAll('.counter-display')[4];
+ let c11 = document.querySelectorAll('.counter-minus')[4];
+ let c12 = document.querySelectorAll('.counter-plus')[4];
+ let count4 = 0;
+ update4();
+ c12.addEventListener("click",()=>{
+     count4++;
+     if(count4>=0){
+     update4();}
+ }) ;
+ c11.addEventListener("click",()=>{
+     count4--;
+     if(count4>=0){
+     update4();}
+ });
+ function update4(){
+     c10.innerHTML = "Items Selected : " +  count4;
+ };
+ 
+ 
+ // 6th started
+ let c13 = document.querySelectorAll('.counter-display')[5];
+ let c14 = document.querySelectorAll('.counter-minus')[5];
+ let c15 = document.querySelectorAll('.counter-plus')[5];
+ let count5 = 0;
+ update5();
+ c15.addEventListener("click",()=>{
+     count5++;
+     if(count5>=0){
+     update5();}
+ }) ;
+ c14.addEventListener("click",()=>{
+     count5--;
+     if(count5>=0){
+     update5();}
+ });
+ function update5(){
+     c13.innerHTML ="Items Selected : " +  count5;
+ };
+ 
+ 
+ </script>
+
+</body>
+</html>
